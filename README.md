@@ -1,9 +1,9 @@
-# Refugee and Migration Framing Vocabulary (RMFV)
+# Refugees and Migration Framing Vocabulary (RMFV)
 
 ## Overview
 
-*Refugee and Migration Framing Vocabulary* (RMFV) is a German-language lexical resource which consists of dictionaries of 8 *issue frames* specifically related to the event "European Refugee Crisis" between 2014-2018 (issue frames ≈ the aspects of an event that are emphasized by the information sender). 
-The eight categories of issue frames are from our *Refugee and Migration Framing Schema* (RMFS), a schema developed in a theory-driven fashion. 
+*Refugees and Migration Framing Vocabulary* (RMFV) is a German-language lexical resource which consists of dictionaries of 8 *issue frames* specifically related to the event "European Refugee Crisis" between 2014-2018 (issue frames ≈ the aspects of an event that are emphasized by the information sender). 
+The eight categories of issue frames are from our *Refugees and Migration Framing Schema* (RMFS), a schema developed in a theory-driven fashion. 
 Both RMFV and RMFS are presented in: 
 
 *Qi Yu & Anselm Fliethmann. (2021). "Frame detection in German political discourses: How far can we go without large-scale manual corpus annotation?". 1st Workshop on Computational Linguistics for Political Text Analysis (CPSS). 6th September, Düsseldorf, Germany/Online.*
