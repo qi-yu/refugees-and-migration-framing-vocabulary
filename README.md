@@ -26,3 +26,6 @@ Please cite the following paper when using RMFV:
 ## License
 RMFV is made available under Creative Commons Attribution 4.0 International (CC-BY-4.0). See `LICENSE.txt` for license rights and limitations.
 By downloading RMFV, you acknowledge the terms and conditions of CC-BY-4.0.
+
+## Acknowledgement
+This project is funded by the Deutsche Forschungsgemeinschaft (DFG – German Research Foundation) under Germany‘s Excellence Strategy – EXC-2035/1 – 390681379.
