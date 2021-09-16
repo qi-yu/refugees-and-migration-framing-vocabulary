@@ -18,7 +18,7 @@ Please cite the following paper when using RMFV:
 
     @inproceedings{yu2021frame, 
     title={Frame detection in {G}erman political discourses: How far can we go without large-scale manual corpus annotation?},
-    author={Qi Yu and Anselm Fliethmann},
+    author={Yu, Qi and Fliethmann, Anselm},
     booktitle={Proceedings of 1st Workshop on Computational Linguistics for Political Text Analysis},
     year={2021}
     }
