@@ -20,6 +20,7 @@ Please cite the following paper when using RMFV:
     title={Frame detection in {G}erman political discourses: How far can we go without large-scale manual corpus annotation?},
     author={Yu, Qi and Fliethmann, Anselm},
     booktitle={Proceedings of 1st Workshop on Computational Linguistics for Political Text Analysis},
+    pages={13--24},
     year={2021}
     }
 
