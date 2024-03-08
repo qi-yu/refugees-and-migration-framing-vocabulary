@@ -3,6 +3,7 @@
 ## 1. Overview
 
 *Refugees and Migration Framing Vocabulary* (RMFV) is a German-language lexical resource which consists of dictionaries of 9 *issue frames* specifically related to the event "European Refugee Crisis" between 2014-2018 (issue frames ≈ the aspects of an event that are emphasized by the information sender). 
+
 The nine categories of issue frames are from our *Refugees and Migration Framing Schema* (RMFS), a schema developed in a theory-driven fashion. 
 Both RMFV and RMFS are presented in: 
 
