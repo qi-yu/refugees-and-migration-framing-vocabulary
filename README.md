@@ -1,5 +1,11 @@
 # Refugees and Migration Framing Vocabulary (RMFV)
 
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
+
 ## 1. About
 
 *Refugees and Migration Framing Vocabulary* (RMFV) is a German-language lexical resource which consists of dictionaries of 9 *issue frames* specifically related to the event "European Refugee Crisis" between 2014-2018 (issue frames ≈ the aspects of an event that are emphasized by the information sender). 
@@ -30,17 +36,5 @@ Please cite the following paper when using RMFV:
         pages={15–31}
     }
 
-## 3. License
-Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
-
-This work is licensed under a
-[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
-
-[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
-
-[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
-[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
-[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
-
-## 4. Acknowledgement
+## 3. Acknowledgement
 This project is funded by the Deutsche Forschungsgemeinschaft (DFG – German Research Foundation) under Germany‘s Excellence Strategy – EXC-2035/1 – 390681379.
