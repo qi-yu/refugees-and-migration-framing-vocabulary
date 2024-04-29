@@ -25,7 +25,7 @@ Both RMFV and RMFS are presented in:
 **Contributors:**
 Qi Yu, Anselm Fliethmann, Fabian Cloos, Hannah Horschke, Bibiane Neisser, Clara Oppenländer
 
-## 2. Cite *RMFV*
+## 2. Cite RMFV
 Please cite the following paper when using RMFV:
 
     @article{yu2022frame, 
