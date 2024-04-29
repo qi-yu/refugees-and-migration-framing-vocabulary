@@ -1,0 +1,148 @@
+---
+title: "Extract Topical Keywords from MigParl Corpus"
+author: "Qi Yu"
+date: "2023-08-02"
+output: html_document
+---
+
+REFERENCES:
+
+https://cran.r-project.org/web/packages/polmineR/polmineR.pdf
+
+https://cran.r-project.org/web/packages/polmineR/vignettes/vignette.html
+
+https://polmine.github.io/MigParl/data-overview.html#linguistical-and-structural-annotation
+
+
+```{r}
+library(cwbtools)
+library(polmineR)
+library(stringr)
+```
+
+# Read in MigParl corpus and select the subset between 2014-2018: 
+
+```{r}
+corpus() # to see whether the MIGPARL corpus is listed
+```
+
+```{r}
+migparl_partition <- partition("MIGPARL", year = c("2014", "2015", "2016", "2017", "2018"))
+```
+
+
+# Read in RMFV:
+
+```{r}
+wordlists_path <- "./rmfv"
+wordlist_files <- list.files(wordlists_path, pattern = "\\.txt$", full.names = TRUE)
+wordlists_dictionary <- list()
+
+for (file in wordlist_files) {
+  identifier <- tools::file_path_sans_ext(basename(file))
+  word_vector <- scan(file = file, what = character(), sep = "\n")
+  wordlists_dictionary[[identifier]] <- word_vector
+}
+```
+
+
+```{r}
+fluechtling_keywords = c(
+    "Flüchtling",
+    "Geflüchtete", "Geflüchteten", "Geflüchteter", "Geflüchtetem",
+    "Migrant", "Migrantin", "Migranten",
+    "Asylant", "Asylanten",
+    "Asylwerber", "Asylwerberin",
+    "Asylbewerber", "Asylbewerberin",
+    "Asylsuchende", "Asylsuchenden", "Asylsuchender", "Asylsuchendem"
+)
+
+modal_and_light_verbs = c(
+  "dürfen", "mögen", "müssen", "sollen", # Modal verbs that are not included here are already covered by the stopword list below
+  "sagen", "geben", "kommen", "gehen", "machen", "lassen", "finden")
+
+stop_words <- c(tm::stopwords("de"), fluechtling_keywords, modal_and_light_verbs, 
+                "Sie|sie", "er|es|sie", "Ihr|ihr", "d", "jed", "solch", "dass", "@card@", "#unknown#", "``")
+```
+
+
+```{r}
+identifiers <- names(wordlists_dictionary)
+output_path <- "./output"
+top_n = 20
+
+for (identifier in identifiers) {
+  expanded_lemmas <- c()
+  current_wordlist <- wordlists_dictionary[[identifier]]
+  
+  for (w in current_wordlist) {
+    if (count(migparl_partition, query=w, p_attribute="lemma")$count > 0) {
+      cooc <- cooccurrences(migparl_partition, query = w, p_attribute="lemma", method="chisquare")
+      
+      cooc_as_df <- as.data.frame(cooc) %>% 
+        subset(!lemma %in% stop_words & !str_detect(lemma, "^[[:punct:][:digit:]]+$")) %>% 
+        subset(count_coi >= 5)
+      
+      for (new_word in cooc_as_df$lemma[1:top_n]) {
+        if (!is.na(new_word) & !new_word %in% current_wordlist & !new_word %in% expanded_lemmas) {
+          expanded_lemmas <- c(expanded_lemmas, new_word)
+        }
+      }
+    }
+  }
+  
+  writeLines(expanded_lemmas, paste(output_path, "/", identifier, ".txt", sep=""))
+}
+```
+
+
+# Compare the method chi-square and PMI:
+
+```{r}
+query_word = "Asylrecht"
+```
+
+**chi-square:**
+
+```{r}
+cooc <- cooccurrences(migparl_partition, query = query_word, p_attribute="lemma", method="chisquare")
+cooc_as_df <- as.data.frame(cooc) %>%
+  subset(!lemma %in% stop_words & !str_detect(lemma, "^[[:punct:][:digit:]]+$")) %>%
+  subset(count_coi >= 5)
+
+cooc_as_df[1:20, ]$lemma
+```
+
+**PMI:**
+
+```{r}
+cooc <- cooccurrences(migparl_partition, query = query_word, p_attribute="lemma", method="pmi")
+cooc_as_df <- as.data.frame(cooc) %>%
+  subset(!lemma %in% stop_words & !str_detect(lemma, "^[[:punct:][:digit:]]+$")) %>%
+  subset(count_coi >= 5)
+
+cooc_as_df[1:20, ]$lemma
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
