@@ -6,6 +6,13 @@
 [cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
 [cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
 
+## NEWS
+🆕🔥 RMFV has new release! Check out the latest version at the ```main``` branch. The older branch is archived in the branch ```archive-v1```.
+
+**Update in the new version:**
+
+The dataset [MigParl](https://polmine.github.io/MigParl/) (Blätte & Leonhardt 2020) is used as an extra resource to enhance the compilation of RMFV. 
+
 ## 1. About
 
 *Refugees and Migration Framing Vocabulary* (RMFV) is a German-language lexical resource which consists of dictionaries of 9 *issue frames* specifically related to the event "European Refugee Crisis" between 2014-2018 (issue frames ≈ the aspects of an event that are emphasized by the information sender). 
@@ -13,9 +20,7 @@
 The nine categories of issue frames are from our *Refugees and Migration Framing Schema* (RMFS), a schema developed in a theory-driven fashion. 
 Both RMFV and RMFS are presented in: 
 
-*Qi Yu & Anselm Fliethmann. (2021). "Frame detection in German political discourses: How far can we go without large-scale manual corpus annotation?". 1st Workshop on Computational Linguistics for Political Text Analysis (CPSS). 6th September, Düsseldorf, Germany/Online.*
-
-For technical details of the creation of RMFV, please refer to the original paper (section 5).  
+**Qi Yu & Anselm Fliethmann. 2021.** Frame detection in German political discourses: How far can we go without large-scale manual corpus annotation?. *Journal for Language Technology and Computational Linguistics*, 35(2): 15–31
 
 **Contributors:**
 Qi Yu, Anselm Fliethmann, Fabian Cloos, Hannah Horschke, Bibiane Neisser, Clara Oppenländer
